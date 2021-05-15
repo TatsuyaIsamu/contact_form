@@ -1,0 +1,14 @@
+<div class="contact">
+  <% @contact.errors.full_messages.each do |msg|%>
+    <%= msg%>
+  <% end %>
+  <%= form_with(model: @contact, local: true) do |form| %>  
+    <%= form.label :name%><br>
+    <%= form.text_field :name%><br>
+    <%= form.label :email%><br>
+    <%= form.text_field :email%><br>
+    <%= form.label :content%><br>
+    <%= form.text_field :content%><br>
+    <%= form.submit %>
+  <% end %>
+</div>
